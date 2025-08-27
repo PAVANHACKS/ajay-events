@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Quote - Ajay Events</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+    }
+
+    header {
+      background: #b71c1c;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #b71c1c;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    form input, form select, form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      width: 100%;
+    }
+
+    form textarea {
+      grid-column: 1 / 3;
+      height: 120px;
+      resize: none;
+    }
+
+    .btn {
+      grid-column: 1 / 3;
+      padding: 12px;
+      background: #b71c1c;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #8e0000;
+    }
+
+    .contact-info {
+      margin-top: 40px;
+      padding: 20px;
+      background: #f1f1f1;
+      border-radius: 8px;
+    }
+
+    .contact-info h3 {
+      color: #b71c1c;
+      margin-bottom: 10px;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ajay Events</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="Contact.html">Contact</a>
+      <a href="RequestQuote.html">Request Quote</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Request a Quote</h2>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Your Full Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Your Phone Number" required>
+      <select name="event_type" required>
+        <option value="">Select Event Type</option>
+        <option value="Wedding">Wedding</option>
+        <option value="Birthday">Birthday Party</option>
+        <option value="Corporate">Corporate Event</option>
+        <option value="Concert">Concert</option>
+        <option value="Other">Other</option>
+      </select>
+      <input type="date" name="event_date" required>
+      <input type="text" name="venue" placeholder="Event Venue" required>
+      <textarea name="message" placeholder="Additional Details..."></textarea>
+      <button type="submit" class="btn">Submit Request</button>
+    </form>
+
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <p><strong>Address:</strong> #36-16-28, Stadium Road, Old SBI Bank Opp. Street, Rajamahendravaram</p>
+      <p><strong>Phone:</strong> +91 9154922992</p>
+      <p><strong>Email:</strong> ajayevents@example.com</p>
+    </div>
+  </div>
+</body>
+</html>

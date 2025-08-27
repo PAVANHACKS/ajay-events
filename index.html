@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ajay Events - Login</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      background-color: #fff8e1;
+    }
+
+    header {
+      background-color: maroon;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+      color: maroon;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      background: #ffffff;
+      border: 2px solid maroon;
+      border-radius: 10px;
+      padding: 30px;
+      width: 320px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin: 20px;
+    }
+
+    input[type="text"], input[type="password"], input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 15px 0;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+    }
+
+    .password-box {
+      position: relative;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 12px;
+      cursor: pointer;
+      color: maroon;
+    }
+
+    button {
+      width: 100%;
+      background-color: maroon;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: darkred;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      color: #0e0202;
+      margin-bottom: 10px;
+    }
+
+    .forgot-link {
+      display: block;
+      margin-top: -10px;
+      margin-bottom: 15px;
+      font-size: 14px;
+      text-align: right;
+    }
+
+    .forgot-link a {
+      text-decoration: none;
+      color: maroon;
+    }
+
+    .forgot-link a:hover {
+      text-decoration: underline;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      text-align: center;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+  <a href="dashboard.php">🏠 Dashboard</a>
+  <a href="view_events.php">📅 View Events</a>
+  <a href="my_bookings.php">📋 My Bookings</a>
+  <a href="logout.php">🚪 Logout</a>
+</div>
+
+
+  <header>
+    <h1>Ajay Events Management</h1>
+    <p class="subtitle">Welcome to our Traditional Event Booking System</p>
+  </header>
+
+  <div class="container">
+
+    <!-- Login -->
+    <div class="box">
+      <h2>Login</h2>
+      <input type="text" id="loginUsername" placeholder="Username or Email" required />
+      
+      <div class="password-box">
+        <input type="password" id="loginPassword" placeholder="Password" required />
+        <span class="toggle-password" onclick="togglePassword('loginPassword')">👁</span>
+      </div>
+      
+      <span class="forgot-link"><a href="#">Forgot Password?</a></span>
+      <button onclick="validateLogin()">Login</button>
+      <div id="loginError" class="error"></div>
+    </div>
+
+    <!-- Register -->
+    <div class="box">
+      <h2>Register</h2>
+      <input type="text" id="regName" placeholder="Full Name" required />
+      <input type="email" id="regEmail" placeholder="Email" required />
+      <input type="text" id="regUsername" placeholder="Username" required />
+      
+      <div class="password-box">
+        <input type="password" id="regPassword" placeholder="Create Password" required />
+        <span class="toggle-password" onclick="togglePassword('regPassword')">👁</span>
+      </div>
+
+      <button onclick="validateRegister()">Register</button>
+      <div id="regError" class="error"></div>
+    </div>
+
+  </div>
+
+  <script>
+    function togglePassword(id) {
+      const input = document.getElementById(id);
+      input.type = input.type === "password" ? "text" : "password";
+    }
+
+    function validateLogin() {
+      const user = document.getElementById('loginUsername').value.trim();
+      const pass = document.getElementById('loginPassword').value.trim();
+      const error = document.getElementById('loginError');
+
+      if (!user || !pass) {
+        error.textContent = "Please fill in all fields.";
+      } else {
+        error.textContent = "";
+        alert("Login submitted successfully.");
+        // TODO: Connect to backend
+      }
+    }
+
+    function validateRegister() {
+      const name = document.getElementById('regName').value.trim();
+      const email = document.getElementById('regEmail').value.trim();
+      const username = document.getElementById('regUsername').value.trim();
+      const password = document.getElementById('regPassword').value.trim();
+      const error = document.getElementById('regError');
+
+      if (!name || !email || !username || !password) {
+        error.textContent = "All fields are required.";
+      } else {
+        error.textContent = "";
+        alert("Registration submitted successfully.");
+        // TODO: Connect to backend
+      }
+    }
+  </script>
+
+</body>
+</html>

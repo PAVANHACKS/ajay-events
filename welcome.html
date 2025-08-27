@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajay Events - Welcome</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Telugu:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Tiro Telugu', serif;
+      background: url('https://get.pxhere.com/photo/best-traditional-wedding-photography-entertainment-event-performance-fun-tradition-ceremony-performing-arts-1454915.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .overlay {
+      background-color: rgba(255, 223, 88, 0.75);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .logo-centered {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-centered a img {
+      height: 120px;
+      margin-bottom: 10px;
+      animation: fadeIn 2s ease-in-out;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-centered a img:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      color: #6b2400;
+      text-shadow: 2px 2px #fff8c9;
+      animation: fadeInDown 2s ease;
+      margin-top: 10px;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      color: #4b1d06;
+      margin-bottom: 40px;
+      animation: fadeInUp 2s ease 1s both;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* WhatsApp Button Styles */
+    .fixed-whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      background-color: #25D366;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .fixed-whatsapp-button img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .fixed-whatsapp-button:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="logo-centered">
+      <a href="register.html">
+        <img src="https://logos.textgiraffe.com/logos/logo-name/42503404-designstyle-bazinga-l.png" alt="Ajay Events Logo">
+      </a>
+      <h1>Welcome to Ajay Events</h1>
+    </div>
+    <h2>అజయ్ ఈవెంట్స్ కు స్వాగతం</h2>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919390365070" class="fixed-whatsapp-button" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="Chat on WhatsApp" />
+  </a>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Band Music Services - Ajay Events</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      background: #fff;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 12px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+    }
+    .back-btn {
+      display: block;
+      width: fit-content;
+      margin: 30px auto;
+      padding: 12px 20px;
+      background: #222;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    .back-btn:hover {
+      background: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Band Music Services</h1>
+    <p>Set the mood with live band performances that elevate your event’s energy.</p>
+  </header>
+
+  <section class="gallery">
+    <div class="gallery-item">
+      <img src="https://i.pinimg.com/736x/bb/af/d0/bbafd0e3f794acb50c338e5a2679965e.jpg" alt="Live Band Jazz Performance">
+      <div class="caption">Live Band—Jazz Vibe</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://assets.thehansindia.com/h-upload/2023/05/20/1352423-untitled-1.jpg" alt="Wedding Band Performance">
+      <div class="caption">Ocassion Band</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://i.ytimg.com/vi/y_BdRuA2QE4/maxresdefault.jpg" alt="Corporate Event Band">
+      <div class="caption">Telugu Plays</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="https://i.ytimg.com/vi/0SpzrXkMCxI/maxresdefault.jpg" alt="Energetic Rock Band">
+      <div class="caption">Record Dance </div>
+    </div>
+  </section>
+
+  <a href="dashboard.php" class="back-btn">⬅ Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ajay Events - Login</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fff8e1;
+    }
+
+    /* Header Styling */
+    .header {
+      background-color: maroon;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    .header p {
+      margin: 5px 0 0;
+      font-style: italic;
+    }
+
+    /* Centering Container */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 120px);
+    }
+
+    .form-wrapper {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 10px;
+      border: 2px solid maroon;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: maroon;
+      margin-bottom: 25px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group label {
+      display: block;
+      font-weight: bold;
+      color: #004d40;
+      margin-bottom: 5px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    /* Corrected Password Wrapper */
+    .password-wrapper {
+      position: relative;
+    }
+
+    .password-wrapper input {
+      padding-right: 40px; /* space for toggle icon */
+    }
+
+    .toggle-password {
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: maroon;
+      font-size: 16px;
+      user-select: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: maroon;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: darkred;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .links a {
+      display: block;
+      margin: 5px 0;
+      text-decoration: none;
+      color: maroon;
+      font-weight: bold;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Ajay Events Management</h1>
+    <p>A Traditional Way to Celebrate</p>
+  </div>
+
+  <!-- Login Form -->
+  <div class="container">
+    <div class="form-wrapper">
+      <form action="login.php" method="POST">
+        <h2>Login</h2>
+
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" placeholder="Enter your username" required />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <div class="password-wrapper">
+            <input type="password" name="password" id="password" placeholder="Enter your password" required />
+            <span class="toggle-password" onclick="togglePassword()">🙈</span>
+          </div>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <div class="links">
+          <a href="register.html">👉 New User? <strong>Register Here</strong></a>
+          <a href="forgot_password.html">🔑 <strong>Forgot Password?</strong></a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toggle Password Script -->
+  <script>
+    function togglePassword() {
+      const passInput = document.getElementById("password");
+      const toggleIcon = document.querySelector(".toggle-password");
+
+      if (passInput.type === "password") {
+        passInput.type = "text";
+        toggleIcon.textContent = "👁️";
+      } else {
+        passInput.type = "password";
+        toggleIcon.textContent = "🙈";
+      }
+    }
+  </script>
+
+</body>
+</html>

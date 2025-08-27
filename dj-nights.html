@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DJ Nights – Ajay Events</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      color: #333;
+    }
+    header {
+      background: #1a237e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .back-button {
+      display: block;
+      width: fit-content;
+      margin: 30px auto;
+      background: #1a237e;
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .back-button:hover {
+      background: #3949ab;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>DJ Nights</h1>
+  </header>
+
+  <section class="gallery">
+    <div class="gallery-item">
+      <img src="https://www.adorama.com/alc/wp-content/uploads/2017/08/shutterstock_415922566.jpg" alt="DJ Mixing Live">
+      <div class="caption">Live DJ Mixing</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://cdn0.weddingwire.in/vendor/1825/3_2/960/jpeg/whatsapp-image-2019-01-21-at-4-03-51-pm-1_15_181825.jpeg" alt="DJ Setup with Lights">
+      <div class="caption">DJ Setup with Lights</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://www.vinylrecordday.org/wp-content/uploads/2023/06/essential-home-dj-setup-components.jpg" alt="DJ Equipment Setup">
+      <div class="caption">DJ Equipment Setup</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://i.ytimg.com/vi/OffIYaHCft0/maxresdefault.jpg" alt="DJ Performance">
+      <div class="caption">DJ Performance in Action</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://wallpaperaccess.com/full/5429549.jpg" alt="Party Dance Floor">
+      <div class="caption">Party Dance Floor Vibes</div>
+    </div>
+  </section>
+
+  <a href="dashboard.php" class="back-button">← Back to Home</a>
+</body>
+</html>

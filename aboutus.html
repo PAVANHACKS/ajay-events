@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aboutus - Ajay Events</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdf6f0;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background: #8b0000;
+      color: white;
+      padding: 15px;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .caption {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #8b0000;
+    }
+    .content {
+      padding: 0 15px 15px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .back-home {
+      display: inline-block;
+      margin: 30px auto;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background: #8b0000;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .back-home:hover {
+      background: #b22222;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Aboutus - Ajay Events</header>
+
+  <section class="gallery">
+    <div class="card">
+      <img src="https://i.pinimg.com/originals/e7/a2/df/e7a2dfba57362c848fb61c2702f06beb.jpg" alt="Conference Stage">
+      <p class="caption">Stage Decaration</p>
+      <p class="content">Our conferences are designed with world-class stages, professional lighting, and traditional touches that leave a lasting impression on every guest.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/c9/09/c3/c909c3607dea475a0e7afca8ea65725d.jpg" alt="Business Conference">
+      <p class="caption">Traditional Decaration</p>
+      <p class="content">We blend modern conference facilities with a traditional essence, ensuring professional discussions happen in an inspiring atmosphere.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://i.pinimg.com/originals/92/d6/40/92d640eea6973c420fb3c5dbaea51375.jpg" alt="Delegates">
+      <p class="caption">Birthday Decoration</p>
+      <p class="content">From seating arrangements to hospitality, Ajay Events guarantees unmatched comfort for delegates and speakers alike.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://i.ytimg.com/vi/SxXYBr4WhYc/maxresdefault.jpg" alt="Conference Dinner">
+      <p class="caption">Ganapathi Mandapam</p>
+      <p class="content">We host gala dinners and networking sessions, giving every participant the opportunity to connect in style.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://www.happywedding.app/blog/wp-content/uploads/2020/02/Creative-wedding-lighting-entrance.jpg" alt="Traditional Touch">
+      <p class="caption">Grand Entry Welcome</p>
+      <p class="content">Ajay Events is known for adding cultural elegance to every corporate event, making it both meaningful and memorable.</p>
+    </div>
+    <div class="card">
+      <img src="https://www.luckylighthouse.in/img/house_light/h42b.jpg" alt="Elegant Lighting">
+      <p class="caption">Elegant Lighting Setup</p>
+      <p class="content">Our meticulous attention to detail ensures that lighting enhances the grandeur of your conference, creating the perfect ambiance with precision and elegance.</p>
+    </div>
+  </section>
+  <!-- Our Agenda Section -->
+<section id="agenda">
+  <h2>Our Agenda</h2>
+  <p>
+    At Ajay Events, our mission is to create unforgettable moments filled with joy,
+    tradition, and elegance. We focus on providing unique event management solutions
+    that blend creativity with perfection. From weddings and conferences to cultural
+    gatherings, we ensure every detail is handled with care, making your celebration
+    truly special.
+  </p>
+</section>
+
+<!-- Owner's Panel Section -->
+<section id="owners" style="margin-top: 50px; text-align: center;">
+  <h2>Our Leadership</h2>
+  <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 30px; flex-wrap: wrap;">
+
+    <!-- President -->
+<div style="flex: 1; text-align: center; margin: 10px;">
+  <img src="uploads/President.jpg.jpeg" alt="President" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <h3 style="margin-top: 10px;">President of Ajay Events</h3>
+  <p>Guiding the vision and growth of Ajay Events with strong leadership.</p>
+</div>
+
+<!-- Chairman -->
+<div style="flex: 1; text-align: center; margin: 10px;">
+  <img src="uploads/Chairman1.jpeg" alt="Chairman" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+  <h3 style="margin-top: 10px;">Chairman of Ajay Events</h3>
+  <p>Leading with innovation and ensuring excellence in every event we create.</p>
+</div>
+
+
+
+
+  </div>
+</section>
+
+
+  <a href="dashboard.php" class="back-home">⬅ Back to Home</a>
+
+</body>
+</html>

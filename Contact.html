@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajay Events - Contact Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #b30000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .contact-form, .contact-info {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .contact-form h2, .contact-info h2 {
+      margin-bottom: 15px;
+      color: #b30000;
+      font-size: 22px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form input, form textarea {
+      margin-bottom: 15px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    form textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    form button {
+      background: #b30000;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background: #800000;
+    }
+
+    .info-item {
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    .info-item strong {
+      color: #333;
+    }
+
+    .back-home {
+      text-align: center;
+      margin: 30px;
+    }
+
+    .back-home a {
+      background: #b30000;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .back-home a:hover {
+      background: #800000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ajay Events</h1>
+    <p>Contact Us</p>
+  </header>
+
+  <div class="container">
+    <!-- Contact Form First -->
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="send_message.php" method="POST">
+        <input type="text" name="name" placeholder="Your Full Name" required>
+        <input type="email" name="email" placeholder="Your Email Address" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" placeholder="Write your message here..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Contact Info Second -->
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <div class="info-item"><strong>📍 Address:</strong> #2-154, Lord Venkateswara Temple Road,  Main Bazar, Kolukula</div>
+      <div class="info-item"><strong>📞 Phone:</strong> 9133887718</div>
+      <div class="info-item"><strong>📧 Email:</strong> ajayevents@gmail.com</div>
+      <div class="info-item"><strong>⏰ Working Hours:</strong> Mon - Sat, 9:00 AM - 7:00 PM</div>
+    </div>
+  </div>
+
+  <div class="back-home">
+    <a href="dashboard.php">⬅ Back to Home</a>
+  </div>
+
+</body>
+</html>

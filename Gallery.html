@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajay Events - Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #b30000;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+      background: white;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      border-radius: 12px;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 10px;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      font-size: 16px;
+      text-align: center;
+      border-radius: 0 0 12px 12px;
+    }
+
+    .back-home {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .back-home a {
+      background: #b30000;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .back-home a:hover {
+      background: #800000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ajay Events - Gallery</h1>
+    <p>Memorable Moments Captured</p>
+  </header>
+
+  <div class="gallery-container">
+    <!-- Wedding -->
+    <div class="gallery-item">
+      <img src="https://i.ytimg.com/vi/SxXYBr4WhYc/maxresdefault.jpg" alt="Wedding Decoration">
+      <div class="caption">Wedding Celebration</div>
+    </div>
+
+    <!-- Festival -->
+    <div class="gallery-item">
+      <img src="https://as1.ftcdn.net/jpg/09/40/73/42/1000_F_940734224_KsjdqDhDFBPHgZNENuEAiGjoV97frBdm.jpg" alt="Festival Decoration">
+      <div class="caption">Festival Decoration</div>
+    </div>
+
+    <!-- Housewarming -->
+    <div class="gallery-item">
+      <img src="https://stylesatlife.com/wp-content/uploads/2023/06/Housewarming-Flower-Decoration.jpg" alt="Housewarming Ceremony">
+      <div class="caption">Housewarming Ceremony</div>
+    </div>
+
+    <!-- Birthday -->
+    <div class="gallery-item">
+      <img src="https://img.freepik.com/free-photo/birthday-celebration_23-2148867825.jpg" alt="Birthday Party">
+      <div class="caption">Birthday Party</div>
+    </div>
+
+    <!-- Cultural Event (Updated) -->
+    <div class="gallery-item">
+      <img src="https://www.oneindia.com/img/1200x80/2020/10/cultural-event-1602840254.jpg" alt="Cultural Event">
+      <div class="caption">Cultural Event</div>
+    </div>
+
+    <!-- Corporate Event (Updated) -->
+    <div class="gallery-item">
+      <img src="https://www.rockitfish.co.uk/images-casestudies/colconf/conference-organisers.jpg" alt="Corporate Event">
+      <div class="caption">Corporate Event</div>
+    </div>
+  </div>
+
+  <div class="back-home">
+    <a href="dashboard.php">⬅ Back to Home</a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scrolling Images with Pause</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .scroll-section {
+      overflow: hidden;
+      width: 100%;
+      background: #fff;
+      padding: 30px 0;
+    }
+
+    .scroll-wrapper {
+      display: flex;
+      width: max-content;
+      height: 300px;
+    }
+
+    .scroll-image {
+      flex: 0 0 auto;
+      margin: 0 10px;
+      width: 500px;
+      height: 300px;
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .scroll-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    /* Scroll left to right */
+    .scroll-left .scroll-wrapper {
+      animation: scrollLeft 30s linear infinite;
+    }
+
+    /* Scroll right to left */
+    .scroll-right .scroll-wrapper {
+      animation: scrollRight 30s linear infinite;
+    }
+
+    /* Pause animation on hover */
+    .scroll-left:hover .scroll-wrapper,
+    .scroll-right:hover .scroll-wrapper {
+      animation-play-state: paused;
+    }
+
+    /* Animations */
+    @keyframes scrollRight {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    @keyframes scrollLeft {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroll Right to Left -->
+  <div class="scroll-section scroll-right">
+    <div class="scroll-wrapper">
+      <div class="scroll-image">
+        <img src="https://i.ytimg.com/vi/cjPirMe38II/maxresdefault.jpg" />
+        <div class="caption">Stage Setup</div>
+      </div>
+      <div class="scroll-image">
+        <img src="https://i.ytimg.com/vi/SxXYBr4WhYc/maxresdefault.jpg" />
+        <div class="caption">Bride Entry</div>
+      </div>
+      <div class="scroll-image">
+        <img src="https://wallpaperaccess.com/full/5174643.jpg" />
+        <div class="caption">Wedding Lights</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Left to Right -->
+  <div class="scroll-section scroll-left">
+    <div class="scroll-wrapper">
+      <div class="scroll-image">
+        <img src="https://anilevents.in/wp-content/uploads/2020/02/Beautiful-Flower-Decoration.jpg" />
+        <div class="caption">Flower Decoration</div>
+      </div>
+      <div class="scroll-image">
+        <img src="https://i.pinimg.com/originals/23/9a/96/239a96acc9c4f5dc7e75ffdc291043a2.jpg" />
+        <div class="caption">Engagement Stage</div>
+      </div>
+      <div class="scroll-image">
+        <img src="https://as1.ftcdn.net/v2/jpg/02/85/16/32/1000_F_285163203_idtMHwkK28kxOGOLmDW1sFB206dlc40B.jpg" />
+        <div class="caption">Traditional Setup</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajay Events - Request a Quote</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #b30000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    p {
+      margin: 5px 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #b30000;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form label {
+      margin: 8px 0 4px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    form input, form select, form textarea {
+      margin-bottom: 15px;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    form textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    .checkbox-group, .radio-group {
+      margin-bottom: 15px;
+    }
+
+    .checkbox-group label, .radio-group label {
+      font-weight: normal;
+      margin-right: 15px;
+    }
+
+    form button {
+      background: #b30000;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background: #800000;
+    }
+
+    .back-home {
+      text-align: center;
+      margin: 30px;
+    }
+
+    .back-home a {
+      background: #b30000;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .back-home a:hover {
+      background: #800000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ajay Events</h1>
+    <p>Request a Quote</p>
+  </header>
+
+  <div class="container">
+    <h2>Tell Us About Your Event</h2>
+    <form action="submit_quote.php" method="POST" enctype="multipart/form-data">
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" name="phone" placeholder="Your Phone Number" required>
+
+      <label for="event_type">Event Type</label>
+      <select id="event_type" name="event_type" required>
+        <option value="">-- Select Event Type --</option>
+        <option>Wedding</option>
+        <option>Birthday Party</option>
+        <option>Festival</option>
+        <option>Housewarming</option>
+        <option>Cultural Event</option>
+        <option>Corporate Event</option>
+        <option>Other</option>
+      </select>
+
+      <label for="event_date">Event Date</label>
+      <input type="date" id="event_date" name="event_date" required>
+
+      <label for="location">Event Location</label>
+      <input type="text" id="location" name="location" placeholder="City / Venue Name" required>
+
+      <label for="guests">Number of Guests</label>
+      <input type="number" id="guests" name="guests" placeholder="Number of Guests" min="1" required>
+
+      <label for="budget">Estimated Budget (INR)</label>
+      <input type="text" id="budget" name="budget" placeholder="Enter your budget" required>
+
+      <label>Preferred Services</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="services[]" value="Decoration"> Decoration</label>
+        <label><input type="checkbox" name="services[]" value="Catering"> Catering</label>
+        <label><input type="checkbox" name="services[]" value="Music/DJ"> Music / DJ</label>
+        <label><input type="checkbox" name="services[]" value="Photography"> Photography & Videography</label>
+        <label><input type="checkbox" name="services[]" value="Lighting"> Lighting & Stage Setup</label>
+        <label><input type="checkbox" name="services[]" value="Full Package"> Full Event Package</label>
+      </div>
+
+      <label for="theme">Event Theme</label>
+      <select id="theme" name="theme">
+        <option value="">-- Select Event Theme --</option>
+        <option>Traditional</option>
+        <option>Modern</option>
+        <option>Luxury</option>
+        <option>Minimalist</option>
+      </select>
+
+      <label>Preferred Contact Method</label>
+      <div class="radio-group">
+        <label><input type="radio" name="contact_method" value="Phone" required> Phone</label>
+        <label><input type="radio" name="contact_method" value="WhatsApp"> WhatsApp</label>
+        <label><input type="radio" name="contact_method" value="Email"> Email</label>
+      </div>
+
+      <label for="urgency">Timeline / Urgency</label>
+      <select id="urgency" name="urgency" required>
+        <option value="">-- Select Timeline --</option>
+        <option>Immediately</option>
+        <option>Within a Week</option>
+        <option>Within a Month</option>
+        <option>Just Enquiring</option>
+      </select>
+
+      <label for="file">Upload Reference File (optional)</label>
+      <input type="file" id="file" name="reference_file" accept="image/*,application/pdf">
+
+      <label for="message">Additional Details</label>
+      <textarea id="message" name="message" placeholder="Write your event details..." required></textarea>
+
+      <button type="submit">Request Quote</button>
+    </form>
+  </div>
+
+  <div class="back-home">
+    <a href="dashboard.php">⬅ Back to Home</a>
+  </div>
+
+</body>
+</html>

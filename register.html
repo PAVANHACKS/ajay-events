@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ajay Events - Register</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fff8e1;
+    }
+
+    .header {
+      background-color: maroon;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    .header p {
+      margin: 5px 0 0;
+      font-style: italic;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 120px);
+    }
+
+    .form-wrapper {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 10px;
+      border: 2px solid maroon;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      max-width: 450px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: maroon;
+      margin-bottom: 25px;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group label {
+      display: block;
+      font-weight: bold;
+      color: #004d40;
+      margin-bottom: 5px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .password-wrapper {
+      position: relative;
+    }
+
+    .password-wrapper input {
+      padding-right: 40px;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: maroon;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: maroon;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: darkred;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .links a {
+      color: maroon;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Ajay Events Management</h1>
+    <p>A Traditional Way to Celebrate</p>
+  </div>
+
+  <div class="container">
+    <div class="form-wrapper">
+      <form action="register.php" method="POST">
+        <h2>Register</h2>
+
+        <div class="input-group">
+          <label for="name">Full Name</label>
+          <input type="text" name="name" id="name" placeholder="Enter your full name" required />
+        </div>
+
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" name="username" id="username" placeholder="Choose a username" required />
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <div class="password-wrapper">
+            <input type="password" name="password" id="password" placeholder="Create a password" required />
+            <span class="toggle-password" onclick="togglePassword('password', this)">🙈</span>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="confirm_password">Confirm Password</label>
+          <div class="password-wrapper">
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Repeat your password" required />
+            <span class="toggle-password" onclick="togglePassword('confirm_password', this)">🙈</span>
+          </div>
+        </div>
+
+        <button type="submit">Register</button>
+
+        <div class="links">
+          <p>Already have an account? <a href="login.html">Login here</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function togglePassword(fieldId, toggleIcon) {
+      const input = document.getElementById(fieldId);
+      if (input.type === "password") {
+        input.type = "text";
+        toggleIcon.textContent = "👁️";
+      } else {
+        input.type = "password";
+        toggleIcon.textContent = "🙈";
+      }
+    }
+  </script>
+</body>
+</html>
